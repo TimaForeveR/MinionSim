@@ -105,3 +105,4 @@ WeLoveCat:CreateButton("Give 10k", function() local args = {
 }
 
 game:GetService("ReplicatedStorage").timeReward:FireServer(unpack(args))
+end)   ;
