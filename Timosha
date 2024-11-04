@@ -117,7 +117,6 @@ WeLoveCat:CreateButton("TP to farm", function()
 end) ;
 
 WeLoveCat:CreateButton("+10k bananas", function()
-    Этот 
 local args = {
     [1] = 10000,
     [2] = 1
@@ -127,7 +126,6 @@ game:GetService("ReplicatedStorage").timeReward:FireServer(unpack(args))
 end) ;
 
 WeLoveCat:CreateButton("-10k bananas", function()
-    Этот 
 local args = {
     [1] = -10000,
     [2] = 1
