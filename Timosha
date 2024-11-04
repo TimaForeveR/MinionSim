@@ -95,11 +95,11 @@ function ThisActuallyCool()
     end
 end
 
-PhantomForcesWindow = Library:NewWindow("Minion Simulator " .. ThisActuallyCool())
+PhantomForcesWindow = Library:NewWindow("Миньон Симулятор " .. ThisActuallyCool())
 
-WeLoveCat = PhantomForcesWindow:NewSection("Farm")
+WeLoveCat = PhantomForcesWindow:NewSection("От Тимоши")
 --[[ Hub Script ]] --
-WeLoveCat:CreateToggle("Farm (need tp)", function(value) 
+WeLoveCat:CreateToggle("Фарм (нужен тп)", function(value) 
 loopActive = value
         while loopActive and task.wait(1,5) do
 local args = {
@@ -112,11 +112,11 @@ wait(0.1)
 end
 end) ;
 
-WeLoveCat:CreateButton("TP to farm", function()
+WeLoveCat:CreateButton("ТП на фарм, function()
     game.Players.LocalPlayer.Character:PivotTo(CFrame.new(Vector3.new(109, 24, 161)))
 end) ;
 
-WeLoveCat:CreateButton("+10k bananas", function()
+WeLoveCat:CreateButton("+10k бананов", function()
 local args = {
     [1] = 10000,
     [2] = 1
@@ -125,7 +125,7 @@ local args = {
 game:GetService("ReplicatedStorage").timeReward:FireServer(unpack(args))
 end) ;
 
-WeLoveCat:CreateButton("-10k bananas", function()
+WeLoveCat:CreateButton("-10k бананов", function()
 local args = {
     [1] = -10000,
     [2] = 1
