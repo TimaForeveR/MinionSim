@@ -111,7 +111,7 @@ game:GetService("ReplicatedStorage").remotes.rewardOnDestroy:InvokeServer(unpack
 end
 end) ;
 
-WeLoveCat:CreateButton("ТП на фарм, function()
+WeLoveCat:CreateButton("ТП на фарм", function()
     game.Players.LocalPlayer.Character:PivotTo(CFrame.new(Vector3.new(109, 24, 161)))
 end) ;
 
