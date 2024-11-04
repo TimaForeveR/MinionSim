@@ -110,4 +110,28 @@ local args = {
 game:GetService("ReplicatedStorage").remotes.rewardOnDestroy:InvokeServer(unpack(args))
 wait(0.1)
 end
+end) ;
+
+WeLoveCat:CreateButton("TP to farm", function()
+    game.Players.LocalPlayer.Character:PivotTo(CFrame.new(Vector3.new(109, 24, 161)))
+end) ;
+
+WeLoveCat:CreateButton("+10k bananas", function()
+    Этот 
+local args = {
+    [1] = 10000,
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").timeReward:FireServer(unpack(args))
+end) ;
+
+WeLoveCat:CreateButton("-10k bananas", function()
+    Этот 
+local args = {
+    [1] = -10000,
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").timeReward:FireServer(unpack(args))
 end)
