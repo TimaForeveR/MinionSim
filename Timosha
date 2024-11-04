@@ -99,10 +99,15 @@ PhantomForcesWindow = Library:NewWindow("Minion Simulator " .. ThisActuallyCool(
 
 WeLoveCat = PhantomForcesWindow:NewSection("Farm")
 --[[ Hub Script ]] --
-WeLoveCat:CreateButton("Give 10k", function() local args = {
-    [1] = 10000,
-    [2] = 1
+WeLoveCat:CreateToggle("Farm (need tp)", function(value) 
+loopActive = value
+        while loopActive and task.wait(1,5) do
+local args = {
+    [1] = workspace.collectables.area3.tokens.tokenCollectable3,
+    [2] = CFrame.new(109, 24, 161) * CFrame.Angles(-0, 0.7107970714569092, -0)
 }
 
-game:GetService("ReplicatedStorage").timeReward:FireServer(unpack(args))
-end)   ;
+game:GetService("ReplicatedStorage").remotes.rewardOnDestroy:InvokeServer(unpack(args))
+wait(0.1)
+end
+end)
