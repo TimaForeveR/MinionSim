@@ -102,13 +102,15 @@ WeLoveCat = PhantomForcesWindow:NewSection("От Тимоши")
 WeLoveCat:CreateToggle("Фарм (нужен тп)", function(value) 
 loopActive = value
         while loopActive and task.wait(0,5) do
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
 local args = {
-    [1] = workspace.collectables.area3.tokens.tokenCollectable3,
-    [2] = CFrame.new(109, 24, 161) * CFrame.Angles(-0, 0.7107970714569092, -0)
+  [1] = workspace.collectables.area3.tokens.tokenCollectable3,
+  [2] = character.HumanoidRootPart.CFrame
 }
 
 game:GetService("ReplicatedStorage").remotes.rewardOnDestroy:InvokeServer(unpack(args))
-wait(0,5)
 end
 end) ;
 
