@@ -95,11 +95,11 @@ function ThisActuallyCool()
     end
 end
 
-PhantomForcesWindow = Library:NewWindow("Миньон Симулятор " .. ThisActuallyCool())
+PhantomForcesWindow = Library:NewWindow("Миньон Сим " .. ThisActuallyCool())
 
 WeLoveCat = PhantomForcesWindow:NewSection("От Тимоши")
 --[[ Hub Script ]] --
-WeLoveCat:CreateToggle("Фарм (нужен тп)", function(value) 
+WeLoveCat:CreateToggle("Фарм токенов", function(value) 
 loopActive = value
         while loopActive and task.wait(0,5) do
 local player = game.Players.LocalPlayer
