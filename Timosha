@@ -114,20 +114,17 @@ game:GetService("ReplicatedStorage").remotes.rewardOnDestroy:InvokeServer(unpack
 end
 end) ;
 
-WeLoveCat:CreateButton("+10k бананов", function()
+WeLoveCat:CreateToggle("Фарм бананов", function(value) 
+loopActive = value
+        while loopActive and task.wait(0,5) do
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
 local args = {
-    [1] = 10000,
-    [2] = 1
+    [1] = workspace.collectables.area4.collectables2.collectable11,
+    [2] = character.HumanoidRootPart.CFrame
 }
 
-game:GetService("ReplicatedStorage").timeReward:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").remotes.rewardOnDestroy:InvokeServer(unpack(args))
+end
 end) ;
-
-WeLoveCat:CreateButton("-10k бананов", function()
-local args = {
-    [1] = -10000,
-    [2] = 1
-}
-
-game:GetService("ReplicatedStorage").timeReward:FireServer(unpack(args))
-end)
