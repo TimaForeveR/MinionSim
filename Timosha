@@ -193,9 +193,7 @@ PhantomForcesWindow = Library:NewWindow("Миньон Сим " .. ThisActuallyCo
 
 WeLoveCat = PhantomForcesWindow:NewSection("От Тимоши")
 --[[ Hub Script ]] --
-WeLoveCat:CreateToggle("Фарм токенов", function(value) 
-local main = serv:Channel("Main")
-    main:Toggle("Start Snipe", false, function(bool)
+WeLoveCat:CreateToggle("Фарм токенов", function(bool) 
      if bool then
       getrenv()._set = clonefunction(setthreadidentity)
       local old
